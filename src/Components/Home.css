@@ -1,0 +1,118 @@
+.anime-landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1.3);
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+  z-index: -1;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  text-shadow: 0 0 20px #ff0080, 0 0 40px #8000ff;
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #ff0080, 0 0 20px #8000ff;
+  }
+  100% {
+    text-shadow: 0 0 30px #ff80ff, 0 0 60px #c080ff;
+  }
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin: 10px 0 20px;
+  color: #ccc;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.watch {
+  background: linear-gradient(90deg, #ff0080, #8000ff);
+  color: white;
+}
+
+.btn.watch:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff00ff;
+}
+
+.btn.join {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn.join:hover {
+  background: #fff;
+  color: #111;
+  transform: scale(1.05);
+}
+
+.anime-glow {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  bottom: 10%;
+  right: 10%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 0, 128, 0.3), transparent 70%);
+  filter: blur(60px);
+  animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(1.3);
+    opacity: 0.9;
+  }
+}
