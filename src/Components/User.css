@@ -1,0 +1,141 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  min-height: 100vh;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.profile-card {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(118, 43, 43, 0.553);
+}
+
+.profile-image {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-image img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #555;
+  transition: 0.3s;
+}
+
+.upload-btn {
+  position: absolute;
+  bottom: 0;
+  right: 35%;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.upload-btn:hover {
+  background: #333;
+}
+
+.profile-info {
+  margin-top: 1rem;
+}
+
+.profile-info h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.profile-info p {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.edit-input,
+.edit-bio {
+  width: 100%;
+  margin-top: 0.5rem;
+  background: #000;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+
+.edit-bio {
+  min-height: 70px;
+  resize: none;
+}
+
+.profile-actions {
+  margin-top: 1rem;
+}
+
+button {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 6px 12px;
+  margin: 0 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+button:hover {
+  background: #222;
+}
+
+.save-btn {
+  border-color: #3cff00;
+  color: #3cff00;
+}
+
+.cancel-btn {
+  border-color: #ff5050;
+  color: #ff5050;
+}
+
+.profile-actions .edit-btn {
+  border-color: #888;
+}
+
+
+.favorites-section {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.favorites-section h3 {
+  border-bottom: 1px solid #333;
+  padding-bottom: 4px;
+  margin-bottom: 1rem;
+}
+
+.anime-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.anime-item {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}

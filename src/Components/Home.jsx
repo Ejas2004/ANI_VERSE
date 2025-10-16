@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Home.css";
 import Navbar from "./NavBar";
@@ -29,8 +28,9 @@ function Home() {
             >
               <button className="btn watch">Watch Now</button>
             </NavLink>
-
-            <button className="btn join">Join the Community</button>
+            <NavLink to="/community">
+              <button className="btn join">Join the Community</button>
+            </NavLink>
           </div>
         </div>
 
