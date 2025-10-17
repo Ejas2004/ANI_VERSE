@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 
-function Navbar() {
+function NavBar() {
   return (
     <nav className="navbar">
       <img src="logo.png" alt="404-ERROR" />
@@ -40,4 +40,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavBar;

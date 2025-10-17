@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom";
 import "./Home.css";
-import Navbar from "./Navbar";
+import NavBar from "./NavBar";
+
 
 function Home() {
   return (
     <>
-      <Navbar />
+      <NavBar/>
       <div className="anime-landing">
         <div className="overlay"></div>
         <video autoPlay loop muted playsInline className="bg-video">
