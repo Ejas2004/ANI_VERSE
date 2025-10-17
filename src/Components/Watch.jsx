@@ -2,14 +2,16 @@ import React, { useEffect, useState } from "react";
 import "./Watch.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import BackButton from "./BackButton";
 
 function Watch() {
-  const[next,setNext]=useState(1)
+  
   const [datas, setData] = useState([]);
+  
 
   useEffect(() => {
     axios
-      .get(`https://api.themoviedb.org/3/discover/movie?api_key=8c8d4201c369e3061713ad1276a51176&language=en-US&page=1&with_genres=16&with_keywords=210024|287501&with_text_query=death`)
+      .get(`https://api.themoviedb.org/3/discover/movie?api_key=8c8d4201c369e3061713ad1276a51176&language=en-US&page=1&with_genres=16&with_keywords=210024|259583`)
       .then((res) => {
         console.log(res.data.results); // ✅ check if API data comes here
         setData(res.data.results); // ✅ store correct array
@@ -23,16 +25,14 @@ function Watch() {
     <div className="home-container">
       <div id="nav-watch">
 
-      <button id="for-back" onClick={(()=>{
-        move('/home')
-      })}>
-        BACK
-      </button>
+     <BackButton id='Back'/>
       <h1>Gallery</h1>
       </div>
       <div id="card-border">
         {datas.map((movie, index) => (
-          <div
+          <div onClick={(()=>{
+          move('/page',{state:{movie}})
+          })}
             key={index}
             className="movie-card"
             style={{
@@ -47,11 +47,7 @@ function Watch() {
           </div>
         ))}
       </div>
-      <button onClick={(()=>{
-        setNext(next+1);
-        console.log(next);
-      })}> Next page</button>
-    </div>
+ </div>
   );
 }
 

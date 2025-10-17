@@ -1,0 +1,21 @@
+.video-loader {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.video-loader.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

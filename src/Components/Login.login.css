@@ -10,22 +10,50 @@ body {
   background-color: #000;
   color: #fff;
   height: 100vh;
+  overflow: hidden;
 }
 
+/* 🔹 Video Background */
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+  
+}
+
+/* 🔹 Dark Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* 🔹 Centered Login Box */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 .login-box {
-  background: #111;
+  background: rgba(54, 54, 54, 0.8);
   padding: 40px 50px;
   border-radius: 15px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 25px rgba(149, 81, 81, 0.1);
   text-align: center;
   width: 350px;
+  backdrop-filter: blur(10px);
 }
 
 .login-box h1 {
@@ -33,6 +61,7 @@ body {
   margin-bottom: 25px;
   color: #fff;
   letter-spacing: 1px;
+  font-family: Forresten;
 }
 
 form {

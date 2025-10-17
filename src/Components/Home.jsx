@@ -16,7 +16,7 @@ function Home() {
         </video>
 
         <div className="content">
-          <h1 className="title">Welcome to AniVerse 🌙</h1>
+          <h1 className="title">Welcome to AniVerse</h1>
           <p className="subtitle">
             Stream, explore, and relive your favorite anime adventures.
           </p>

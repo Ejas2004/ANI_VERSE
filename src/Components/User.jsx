@@ -4,7 +4,7 @@ import "./User.css";
 import { Edit2, Save, X, Upload } from "lucide-react";
 
 function User() {
-  const { usernameParam } = useParams(); // 👈 get param from URL
+  const { usernameParam } = useParams();
 
   useEffect(() => {
     console.log("Username from URL:", usernameParam);
@@ -20,13 +20,11 @@ function User() {
   const [tempName, setTempName] = useState(username);
   const [tempBio, setTempBio] = useState(bio);
 
-  // 🖼️ Handle image preview on file upload
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) setTempImage(URL.createObjectURL(file));
   };
 
-  // 💾 Save changes
   const handleSave = () => {
     if (tempImage) setImage(tempImage);
     setUsername(tempName);
@@ -34,7 +32,6 @@ function User() {
     setIsEditing(false);
   };
 
-  // ❌ Cancel changes
   const handleCancel = () => {
     setTempImage(null);
     setTempName(username);
@@ -44,8 +41,21 @@ function User() {
 
   return (
     <div className="profile-container">
+      {/* 🔹 Background Video */}
+      <video
+        className="profile-bg-video"
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src="https://motionbgs.com/media/6199/coffee-shop.960x540.mp4" type="video/mp4" />
+      </video>
+
+      {/* 🔹 Dark overlay */}
+      <div className="profile-overlay"></div>
+
       <div className="profile-card">
-        {/* Profile Image */}
         <div className="profile-image">
           <img src={tempImage || image} alt="Profile" />
           {isEditing && (
@@ -62,12 +72,10 @@ function User() {
           )}
         </div>
 
-        {/* URL Username Display */}
         <p className="url-username">
           Profile URL User: <strong>{usernameParam}</strong>
         </p>
 
-        {/* Profile Info */}
         <div className="profile-info">
           {isEditing ? (
             <>
@@ -93,7 +101,6 @@ function User() {
           )}
         </div>
 
-        {/* Buttons */}
         <div className="profile-actions">
           {isEditing ? (
             <>
@@ -111,7 +118,6 @@ function User() {
           )}
         </div>
 
-        {/* Favorites Section */}
         <div className="favorites-section">
           <h3>Favorite Anime</h3>
           <div className="anime-list">
